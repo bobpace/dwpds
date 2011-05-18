@@ -20,7 +20,12 @@ namespace nothinbutdotnetstore.specs
     {
       Establish c = () =>
       {
-        stubs_lookup = depends.on<IDictionary<Type, Type>>();
+        var fake_stub_lookup = new Dictionary<Type, Type>
+        {
+          {typeof (ICanFindDetailsInTheStore), typeof (StubStoreCatalog)}
+        };
+
+        stubs_lookup = depends.on<IDictionary<Type, Type>>(fake_stub_lookup);
       };
 
       Because b = () =>
