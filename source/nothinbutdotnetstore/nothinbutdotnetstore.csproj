@@ -87,6 +87,7 @@
     <Compile Include="web\core\IProcessAnApplicationSpecificBehaviour .cs" />
     <Compile Include="web\core\IProcessIncomingRequests.cs" />
     <Compile Include="web\core\IProcessRequestInformation .cs" />
+    <Compile Include="web\core\IView.cs" />
     <Compile Include="web\core\IViewFinder.cs" />
     <Compile Include="web\core\MissingCommandFactory.cs" />
     <Compile Include="web\core\RawHandler.cs" />
