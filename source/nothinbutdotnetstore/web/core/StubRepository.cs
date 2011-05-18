@@ -14,8 +14,8 @@ namespace nothinbutdotnetstore.web.core
 
     public WhatStub GetStub<WhatStub>() where WhatStub : class
     {
-      var stub = stub_lookup[typeof (WhatStub)] as WhatStub;
-      return stub;
+      var stub = stub_lookup[typeof (WhatStub)];
+      return Activator.CreateInstance(stub) as WhatStub;
     }
   }
 }
