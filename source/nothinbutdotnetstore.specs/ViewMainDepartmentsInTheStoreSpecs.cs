@@ -19,17 +19,18 @@ namespace nothinbutdotnetstore.specs
     {
       Establish c = () =>
       {
+        viewName = "main-departments-in-the-store";
         viewFinder = depends.on<IViewFinder>();
         view = fake.an<IView>();
-        viewFinder.setup(x => x.FindView(Arg<IContainRequestInformation>.Is.Anything)).Return(view);
         requestInformation = fake.an<IContainRequestInformation>();
+        viewFinder.setup(x => x.FindView(requestInformation, viewName)).Return(view);
       };
 
       Because b = () =>
         sut.run(requestInformation);
 
       It should_find_a_view_for_main_departments_in_the_store = () =>
-        viewFinder.received(x => x.FindView(requestInformation));
+        viewFinder.received(x => x.FindView(requestInformation, viewName));
 
       It should_render_the_view = () =>
         view.received(x => x.Render());
@@ -37,6 +38,7 @@ namespace nothinbutdotnetstore.specs
       static IViewFinder viewFinder;
       static IContainRequestInformation requestInformation;
       static IView view;
+      static string viewName;
     }
   }
 }

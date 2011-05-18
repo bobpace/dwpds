@@ -13,7 +13,7 @@ namespace nothinbutdotnetstore.web.core
 
     public void run(IContainRequestInformation request)
     {
-      var view = view_finder.FindView(request);
+      var view = view_finder.FindView(request, "main-departments-in-the-store");
       view.Render();
     }
   }

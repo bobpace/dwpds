@@ -2,7 +2,7 @@
 {
   public interface IViewFinder
   {
-    IView FindView(IContainRequestInformation request);
+    IView FindView(IContainRequestInformation request, string viewName);
   }
 
   public interface IView
