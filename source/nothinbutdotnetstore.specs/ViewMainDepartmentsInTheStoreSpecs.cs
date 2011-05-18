@@ -2,6 +2,7 @@
  using developwithpassion.specifications.rhinomocks;
  using developwithpassion.specifications.extensions;
  using nothinbutdotnetstore.web.core;
+ using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.specs
 {  
@@ -11,15 +12,31 @@ namespace nothinbutdotnetstore.specs
     public abstract class concern : Observes<IProcessAnApplicationSpecificBehaviour,
                                       ViewMainDepartmentsInTheStore>
     {
-        
     }
 
    
     public class when_run : concern
     {
-        
-      It first_observation = () =>        
-        
+      Establish c = () =>
+      {
+        viewFinder = depends.on<IViewFinder>();
+        view = fake.an<IView>();
+        viewFinder.setup(x => x.FindView(Arg<IContainRequestInformation>.Is.Anything)).Return(view);
+        requestInformation = fake.an<IContainRequestInformation>();
+      };
+
+      Because b = () =>
+        sut.run(requestInformation);
+
+      It should_find_a_view_for_main_departments_in_the_store = () =>
+        viewFinder.received(x => x.FindView(requestInformation));
+
+      It should_render_the_view = () =>
+        view.received(x => x.Render());
+
+      static IViewFinder viewFinder;
+      static IContainRequestInformation requestInformation;
+      static IView view;
     }
   }
 }
