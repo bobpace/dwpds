@@ -6,7 +6,8 @@ namespace nothinbutdotnetstore.web.core
   {
     public string get_id_from_url(string url)
     {
-      return string.Empty;
+      var tokens = url.Split(new char[] {'/'});
+      return tokens[2].Replace(".denver", string.Empty);
     }
   }
 }
