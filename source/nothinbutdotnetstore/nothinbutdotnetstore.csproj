@@ -81,6 +81,7 @@
     <Compile Include="infrastructure\Stub.cs" />
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="web\application\catalogbrowsing\DisplayResultsFromStoreCatalog.cs" />
+    <Compile Include="web\application\catalogbrowsing\GetResults.cs" />
     <Compile Include="web\application\catalogbrowsing\ProductItem.cs" />
     <Compile Include="web\application\catalogbrowsing\DepartmentItem.cs" />
     <Compile Include="web\application\catalogbrowsing\ICanFindDetailsInTheStore.cs" />
