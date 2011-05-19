@@ -1,4 +1,6 @@
-﻿using nothinbutdotnetstore.web.application.catalogbrowsing.stubs;
+﻿using System;
+using System.Collections.Generic;
+using nothinbutdotnetstore.web.application.catalogbrowsing.stubs;
 using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.web.application.catalogbrowsing
@@ -25,4 +27,6 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
       display_engine.display(store_catalog.get_products_for(request.map<DepartmentItem>()));
     }
   }
+
+  public delegate IEnumerable<Type> GetResults<T>(ICanFindDetailsInTheStore store_catalog);
 }
