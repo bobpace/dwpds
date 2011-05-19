@@ -20,7 +20,6 @@ namespace nothinbutdotnetstore.specs
     {
       Establish c = () =>
       {
-        //the_current_context = depends.on(ObjectFactory.web.create_http_context());
         request = depends.on(ObjectFactory.web.create_http_context().Request);
       };
 
@@ -28,9 +27,7 @@ namespace nothinbutdotnetstore.specs
         url = sut.get_url();
 
       It should_match_context_url = () =>
-      {
-        url.ShouldEqual("test");
-      };
+        url.ShouldEqual("/blah.aspx");
 
       static string url;
       static HttpRequest request;
