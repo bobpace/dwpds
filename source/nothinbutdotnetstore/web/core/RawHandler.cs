@@ -9,8 +9,9 @@ namespace nothinbutdotnetstore.web.core
     IProcessIncomingRequests front_controller;
     ICreateRequests request_factory;
 
-    public RawHandler():this(new FrontController(),
-      Stub.with<StubRequestFactory>())
+    public RawHandler()
+      : this(new FrontController(),
+        new RequestFactory())
     {
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Web;
 using nothinbutdotnetstore.web.application.catalogbrowsing;
 
@@ -16,6 +17,11 @@ namespace nothinbutdotnetstore.web.core.stubs
       {
         object item = new DepartmentItem();
         return (InputModel) item;
+      }
+
+      public string get_url()
+      {
+        return "";
       }
     }
   }

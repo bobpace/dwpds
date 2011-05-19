@@ -104,7 +104,8 @@
 					</div>
 					
 					<div id="blog_body">
-						
+            <asp:ContentPlaceHolder id="secondaryContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
 					</div>
 					
 				</div>

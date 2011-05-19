@@ -107,6 +107,8 @@
     <Compile Include="web\core\IProcessRequestInformation .cs" />
     <Compile Include="web\core\MissingCommandFactory.cs" />
     <Compile Include="web\core\RawHandler.cs" />
+    <Compile Include="web\core\RequestFactory.cs" />
+    <Compile Include="web\core\stubs\RequestInformation.cs" />
     <Compile Include="web\core\stubs\StubPathRegistry.cs" />
     <Compile Include="web\core\WebFormDisplayEngine.cs" />
     <Compile Include="web\core\RequestCommand.cs" />

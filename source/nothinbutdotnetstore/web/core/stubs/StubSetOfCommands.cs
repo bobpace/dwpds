@@ -8,8 +8,11 @@ namespace nothinbutdotnetstore.web.core.stubs
   {
     public IEnumerator<IProcessRequestInformation> GetEnumerator()
     {
-      yield return new RequestCommand(x => true,
-                                      new ViewProductsInADepartment());
+      //todo need a way to map 
+      //yield return new RequestCommand(x => true,
+      //                                new ViewTheDepartmentsInADepartment());
+      yield return new RequestCommand(x => x.get_url() == "/departments.denver",
+                                      new ViewMainDepartmentsInTheStore());
     }
 
     IEnumerator IEnumerable.GetEnumerator()
@@ -17,4 +20,6 @@ namespace nothinbutdotnetstore.web.core.stubs
       return GetEnumerator();
     }
   }
+
+
 }
