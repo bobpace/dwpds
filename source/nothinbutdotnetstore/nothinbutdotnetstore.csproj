@@ -98,6 +98,7 @@
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\CurrentContextResolver.cs" />
     <Compile Include="web\core\FrontController.cs" />
+    <Compile Include="web\core\ICanParseUrlPaths.cs" />
     <Compile Include="web\core\ICanRenderInformation.cs" />
     <Compile Include="web\core\IContainRequestInformation .cs" />
     <Compile Include="web\core\ICreateRequests.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\stubs\RequestInformation.cs" />
     <Compile Include="web\core\stubs\StubPathRegistry.cs" />
+    <Compile Include="web\core\UrlParser.cs" />
     <Compile Include="web\core\WebFormDisplayEngine.cs" />
     <Compile Include="web\core\RequestCommand.cs" />
     <Compile Include="web\core\RequestCriteria.cs" />

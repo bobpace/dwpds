@@ -111,6 +111,7 @@
     <Compile Include="CalculatorSpecs.cs" />
     <Compile Include="RequestFactorySpecs.cs" />
     <Compile Include="RequestInformationSpecs.cs" />
+    <Compile Include="UrlParserSpecs.cs" />
     <Compile Include="ViewProductsInADepartmentSpecs.cs" />
     <Compile Include="WebFormDisplayEngineSpecs.cs" />
     <Compile Include="CommandRegistrySpecs.cs" />
