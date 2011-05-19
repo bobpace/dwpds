@@ -8,11 +8,12 @@ namespace nothinbutdotnetstore.web.core.stubs
   {
     public IEnumerator<IProcessRequestInformation> GetEnumerator()
     {
-      //todo need a way to map 
-      //yield return new RequestCommand(x => true,
-      //                                new ViewTheDepartmentsInADepartment());
       yield return new RequestCommand(x => x.get_url() == "/departments.denver",
                                       new ViewMainDepartmentsInTheStore());
+      yield return new RequestCommand(x => x.get_url() == "/departments/{id}.denver",
+                                      new ViewTheDepartmentsInADepartment());
+      yield return new RequestCommand(x => x.get_url() == "/departments/{id}/products.denver",
+                                      new ViewProductsInADepartment());
     }
 
     IEnumerator IEnumerable.GetEnumerator()
