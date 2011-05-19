@@ -13,7 +13,7 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing.stubs
 
     public IEnumerable<DepartmentItem> get_departments_for(DepartmentItem department)
     {
-      return Enumerable.Range(11, 20).Select(x => new DepartmentItem(x));
+      return Enumerable.Range(11, 20).Select(x => new DepartmentItem(x) { has_products = true });
     }
 
     public IEnumerable<ProductItem> get_products_for(DepartmentItem department)

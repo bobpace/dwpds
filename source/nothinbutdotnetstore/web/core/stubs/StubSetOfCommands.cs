@@ -21,6 +21,4 @@ namespace nothinbutdotnetstore.web.core.stubs
       return GetEnumerator();
     }
   }
-
-
 }

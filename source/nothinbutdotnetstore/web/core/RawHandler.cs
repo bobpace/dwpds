@@ -1,5 +1,6 @@
 using System.Web;
 using nothinbutdotnetstore.infrastructure;
+using nothinbutdotnetstore.web.application.catalogbrowsing.stubs;
 using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.core
@@ -11,7 +12,7 @@ namespace nothinbutdotnetstore.web.core
 
     public RawHandler()
       : this(new FrontController(),
-        new RequestFactory())
+        new RequestFactory(Stub.with<StubStoreCatalog>()))
     {
     }
 

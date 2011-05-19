@@ -11,7 +11,7 @@ CodeFile="DepartmentBrowser.aspx.cs"
               <% foreach (var department in this.model)
                  {%>
               <tr class="ListItem">
-               <td><a href="/departments/<%=department.id %>"><%= department.name %></a></td>
+               <td><a href="<%=department.url %>"><%= department.name %></a></td>
            	  </tr>        
               <%
                  }%>
